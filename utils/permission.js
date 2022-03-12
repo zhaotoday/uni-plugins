@@ -1,9 +1,10 @@
 import wx from "wx-bridge";
-import $permission from "../lib/permission";
 
 export const permission = {
   request(code) {
-    return $permission.requestAndroidPermission(`android.permission.${code}`);
+    return require("../lib/permission").requestAndroidPermission(
+      `android.permission.${code}`
+    );
   },
   async check(code, tip) {
     const res = await this.request(code);
@@ -24,6 +25,6 @@ export const permission = {
     }
   },
   gotoAppSetting() {
-    $permission.gotoAppPermissionSetting();
+    require("../lib/permission").gotoAppPermissionSetting();
   },
 };
