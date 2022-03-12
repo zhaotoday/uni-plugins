@@ -1,8 +1,11 @@
 {
   "name": "uni-plugins",
-  "version": "1.0.1",
-  "description": "",
+  "version": "1.0.2",
+  "description": "uni plugins",
   "main": "index.js",
-  "author": "",
-  "license": "ISC"
+  "author": "zhaojintian",
+  "license": "ISC",
+  "dependencies": {
+    "wx-bridge": "0.0.39"
+  }
 }
